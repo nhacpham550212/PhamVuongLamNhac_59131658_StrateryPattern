@@ -43,11 +43,11 @@ public class HangHoa {
     public void setMoTa(String moTa) {
         this.moTa = moTa;
     }
-    public String Xuat()
+    public void Xuat()
     {
-        return "Tên hàng Hóa:"+tenHH+"\n"+
+        System.out.println("Tên hàng Hóa:"+tenHH+"\n"+
         "Giá:"+gia+"\n"+
-        "mô tả:"+moTa;
+        "mô tả:"+moTa); 
     }
 
 }

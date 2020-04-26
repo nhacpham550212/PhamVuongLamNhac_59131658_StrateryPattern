@@ -13,24 +13,26 @@ import java.util.ArrayList;
  */
 public class GioHang {
     IThanhToan hinhThucTT;
-    int giaHangHoa;
+    int giatienHang;
     ArrayList<HangHoa> ds = new ArrayList<>();
 
     public IThanhToan getHinhThucTT() {
         return hinhThucTT;
     }
 
+    public int getGiatienHang() {
+        return giatienHang;
+    }
+
+    public void setGiatienHang(int giatienHang) {
+        this.giatienHang = giatienHang;
+    }
+
+
     public void setHinhThucTT(IThanhToan hinhThucTT) {
         this.hinhThucTT = hinhThucTT;
     }
 
-    public int getGiaHangHoa() {
-        return giaHangHoa;
-    }
-
-    public void setGiaHangHoa(int giaHangHoa) {
-        this.giaHangHoa = giaHangHoa;
-    }
     
      public double thanhToan(int tienHang)
     {
@@ -41,14 +43,15 @@ public class GioHang {
             
     {
         ds.add(hh);
+        giatienHang+=hh.getGia();
     }
     
     public void inDanhSach()
     {
         for(HangHoa i : ds)
         {
-            i.Xuat();
+           i.Xuat();
             
-        }
+        }System.out.println("Tiền hàng: "+giatienHang);
     }
 }
